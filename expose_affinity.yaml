@@ -1,0 +1,13 @@
+# serviceSessionAffinity.yaml
+kind: Service
+apiVersion: v1
+metadata:
+  name: affordability-sticky 
+spec:
+  sessionAffinity: ClientIP
+  selector:
+    run: affordability
+  ports:
+  - protocol: TCP
+    port: 80
+  type: LoadBalancer

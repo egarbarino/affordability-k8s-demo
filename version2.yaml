@@ -1,0 +1,30 @@
+# nginxDeployment.yaml
+apiVersion: apps/v1beta1 # for versions before 1.8.0 use apps/v1beta1
+kind: Deployment
+metadata:
+  name: affordability
+  labels:
+    run: affordability
+spec:
+  replicas: 3
+  strategy: 
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: 25%
+      maxUnavailable: 0%
+  selector:
+    matchLabels:
+      run: affordability
+  template:
+    metadata:
+      labels:
+        run: affordability
+    spec:
+      containers:
+      - name: affordability
+        image: egarbarino/affordability2-image
+        ports:
+        - containerPort: 80
+
+
+

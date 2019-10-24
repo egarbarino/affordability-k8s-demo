@@ -1,0 +1,12 @@
+# expose_normal.yaml
+kind: Service
+apiVersion: v1
+metadata:
+  name: affordability 
+spec:
+  selector:
+    run: affordability
+  ports:
+  - protocol: TCP
+    port: 80
+  type: LoadBalancer
