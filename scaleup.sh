@@ -1,3 +1,3 @@
 #!/bin/sh
 set -x
-kubectl scale deployment affordability --replicas=5
+kubectl scale deployment/affordability --replicas=8

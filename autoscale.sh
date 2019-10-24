@@ -1,3 +1,3 @@
 #!/bin/sh
 set -x
-kubectl autoscale deployment affordability --min=1 --max=7 --cpu-percent=5
+kubectl autoscale deployment affordability --min=1 --max=8 --cpu-percent=5
