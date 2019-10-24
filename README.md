@@ -19,12 +19,17 @@ ACME bank offers a mortgage affordability calculator to its customers and prospe
 
 ![Version 1](images/version1.png "Version 1")
 
-The mortgage app is stood up manually by an operation team without Ansible or any kind of automation:
+The mortgage app is stood up manually by an operations team without Ansible or any kind of automation:
 
 ```
 cd version1
 sudo python3 app.py
 ```
+
+Source code:
+
+* [version1/app.py](version1/app.py)
+* [version2/app.py](version2/app.py)
 
 The bank 
 currently runs version 1 in production but a new Digital team is developing version 2 in parallel which is more colourful and allows including the prospect's salary as part of the calculation. 
@@ -34,6 +39,9 @@ currently runs version 1 in production but a new Digital team is developing vers
 The business fears that the migration to version 2 may cause downtime to customers who may be calculating their mortgage affordability on version 1.
 
 A pair of consultants who both look like Chuck Norris' brothers have suggested to ACME bank to try Docker and Kubernetes... 
+
+
+
 
 # Dockerising both Versions 
 
